@@ -61,18 +61,18 @@ export default function Rentals() {
         />
       )}
 
-      <section className="page-hero">
-        <div className="container-site text-center">
-          <div className="section-label">FIND YOUR HOME</div>
-          <h1 className="text-4xl md:text-5xl font-black text-white mb-4">Available Rentals</h1>
-          <p className="text-lg max-w-2xl mx-auto" style={{ color: 'rgba(255,255,255,0.6)' }}>
-            Quality rental properties managed directly by Nexus Growth Inc. — no middlemen, just great homes.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-20" style={{ background: '#080f18' }}>
+      <section className="pt-32 pb-8" style={{ background: '#080f18' }}>
         <div className="container-site">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+            <div>
+              <div className="section-label mb-2">FIND YOUR HOME</div>
+              <h1 className="text-3xl md:text-4xl font-black text-white">Available Rentals</h1>
+              <p className="mt-2 text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>
+                Managed directly by Nexus Growth Inc. — no middlemen, just great homes.
+              </p>
+            </div>
+            <Link to="/contact" className="btn-gold flex-shrink-0">Inquire About a Unit</Link>
+          </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-16">
             {units.map(({ address, city, status, statusStyle, rent, beds, baths, type, available, features, cta, photos }) => (
               <div key={address} className="rounded-2xl overflow-hidden transition-all" style={{ background: 'rgba(27,43,75,0.3)', border: '1px solid rgba(255,255,255,0.1)' }}>
