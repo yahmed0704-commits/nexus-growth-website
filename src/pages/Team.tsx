@@ -23,11 +23,11 @@ const team = [
     photo: null,
   },
   {
-    name: '[Team Member Name — placeholder]',
-    title: 'Admin',
-    bio: 'Supports day-to-day office operations, document management, and internal coordination across departments. [Additional bio — placeholder]',
-    initials: 'AD',
-    photo: null,
+    name: 'Abdul Mumit Liton',
+    title: 'Administrative & Operations',
+    bio: 'Coordinates construction, leasing, and operational execution. Assists in property acquisition and management, supports tenant relations and rental oversight, and assists with financial reporting and internal control.',
+    initials: 'AL',
+    photo: `${import.meta.env.BASE_URL}team-liton.jpeg`,
   },
   {
     name: 'Tasnim Chowdhury',
