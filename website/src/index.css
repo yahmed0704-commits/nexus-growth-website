@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-navy text-white font-sans antialiased;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply bg-gold text-navy-dark font-bold px-6 py-3 rounded-lg transition-all duration-200 hover:bg-gold-light hover:shadow-lg hover:shadow-gold/20 inline-block;
+  }
+  .btn-outline {
+    @apply border border-white/20 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 hover:border-gold hover:text-gold inline-block;
+  }
+  .btn-navy {
+    @apply bg-navy-light text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 hover:bg-navy-accent inline-block;
+  }
+  .section-label {
+    @apply text-gold text-xs font-semibold tracking-widest uppercase mb-3;
+  }
+  .section-title {
+    @apply text-white text-3xl md:text-4xl font-bold mb-4;
+  }
+  .card-dark {
+    @apply bg-navy-mid border border-white/5 rounded-2xl p-6 transition-all duration-200 hover:border-gold/20 hover:bg-navy-light/40;
+  }
+  .gold-divider {
+    @apply w-12 h-1 bg-gold rounded-full mb-6;
+  }
+  .page-hero {
+    @apply pt-28 pb-16 md:pt-36 md:pb-20 bg-gradient-to-br from-navy-dark via-navy-light to-navy-dark;
+  }
+  .container-site {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(90deg, #C9912A, #e8b84b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .gold-glow {
+    box-shadow: 0 0 40px rgba(201, 145, 42, 0.15);
+  }
+}
+
+/* Mobile nav open prevents scroll */
+body.nav-open {
+  overflow: hidden;
+}
+
+/* Smooth page transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateY(8px);
+}
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 200ms, transform 200ms;
+}
