@@ -2,6 +2,7 @@
   "name": "nexus-growth-website",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "start": "vite --port 5173",
     "dev": "vite --port 5173",
