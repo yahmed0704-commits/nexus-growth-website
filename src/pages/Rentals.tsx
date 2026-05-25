@@ -114,15 +114,15 @@ export default function Rentals() {
                   </ul>
 
                   <div className="flex flex-col gap-2">
-                    {photos.length > 0 && (
-                      <button
-                        onClick={() => setGallery({ photos, title: address, subtitle: city })}
-                        className="block text-center text-sm font-semibold py-2 rounded-lg transition-all"
-                        style={{ background: 'rgba(201,145,42,0.15)', color: '#C9912A', border: '1px solid rgba(201,145,42,0.3)' }}
-                      >
-                        📷 View Photos ({photos.length})
-                      </button>
-                    )}
+                    <button
+                      onClick={() => photos.length > 0 ? setGallery({ photos, title: address, subtitle: city }) : undefined}
+                      className="block text-center text-sm font-semibold py-2 rounded-lg transition-all"
+                      style={photos.length > 0
+                        ? { background: 'rgba(201,145,42,0.15)', color: '#C9912A', border: '1px solid rgba(201,145,42,0.3)', cursor: 'pointer' }
+                        : { background: 'rgba(255,255,255,0.04)', color: 'rgba(255,255,255,0.25)', border: '1px solid rgba(255,255,255,0.08)', cursor: 'default' }}
+                    >
+                      {photos.length > 0 ? `📷 View Photos (${photos.length})` : '📷 Photos Coming Soon'}
+                    </button>
                     <Link
                       to="/contact"
                       className="block text-center text-sm font-semibold py-2.5 rounded-lg transition-all"
