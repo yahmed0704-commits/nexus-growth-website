@@ -16,10 +16,17 @@ const team = [
     photo: `${import.meta.env.BASE_URL}team-stanley.jpeg`,
   },
   {
-    name: '[Team Member Name — placeholder]',
+    name: '[Secretary — name coming soon]',
     title: 'Secretary',
-    bio: 'Manages corporate governance, board communications, and executive administrative functions. [Additional bio — placeholder]',
+    bio: 'Manages corporate governance, board communications, and executive administrative functions.',
     initials: 'SE',
+    photo: null,
+  },
+  {
+    name: '[Admin — name coming soon]',
+    title: 'Administration',
+    bio: 'Supports day-to-day office operations, document management, and internal coordination across departments.',
+    initials: 'AD',
     photo: null,
   },
   {
