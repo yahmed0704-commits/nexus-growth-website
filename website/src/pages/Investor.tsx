@@ -37,27 +37,26 @@ export default function Investor() {
         <div className="container-site text-center">
           <div className="section-label">BUILD WEALTH WITH US</div>
           <h1 className="text-4xl md:text-5xl font-black text-white mb-4">Investor & Partnerships</h1>
-          <p className="text-white/60 text-lg max-w-2xl mx-auto">
-            Access high-quality New Jersey real estate deal flow. Partner with an experienced team that delivers results.
+          <p className="text-lg max-w-2xl mx-auto" style={{ color: 'rgba(255,255,255,0.6)' }}>
+            Access high-quality New York real estate deal flow. Partner with an experienced team that delivers results.
           </p>
         </div>
       </section>
 
-      {/* Why invest */}
-      <section className="py-20 bg-navy-dark">
+      <section className="py-20" style={{ background: '#080f18' }}>
         <div className="container-site">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
             <div>
               <div className="section-label">WHY INVEST WITH NGI</div>
               <h2 className="section-title">A Partner You Can Trust</h2>
               <div className="gold-divider" />
-              <p className="text-white/60 leading-relaxed mb-4">
-                Nexus Growth Inc. offers accredited and private investors access to carefully curated New Jersey real estate opportunities — with full transparency, professional management, and competitive returns.
+              <p className="leading-relaxed mb-4" style={{ color: 'rgba(255,255,255,0.6)' }}>
+                Nexus Growth Inc. offers accredited and private investors access to carefully curated New York real estate opportunities — with full transparency, professional management, and competitive returns.
               </p>
-              <p className="text-white/60 leading-relaxed mb-8">
+              <p className="leading-relaxed mb-8" style={{ color: 'rgba(255,255,255,0.6)' }}>
                 We've built a track record of successful projects and satisfied partners. Our disciplined approach to acquisitions, renovations, and management ensures every investment is structured for long-term success.
               </p>
-              <div className="bg-gold/5 border border-gold/20 rounded-xl p-4 text-sm text-white/50 mb-6">
+              <div className="rounded-xl p-4 text-sm mb-6" style={{ background: 'rgba(201,145,42,0.05)', border: '1px solid rgba(201,145,42,0.2)', color: 'rgba(255,255,255,0.5)' }}>
                 ⚠️ Specific return figures and financial projections are placeholders — consult your legal/financial advisor before publishing.
               </div>
             </div>
@@ -70,26 +69,25 @@ export default function Investor() {
               ].map(([icon, title, desc]) => (
                 <div key={title as string} className="card-dark">
                   <div className="text-2xl mb-2">{icon}</div>
-                  <div className="text-white font-semibold text-sm mb-1">{title}</div>
-                  <div className="text-white/40 text-xs leading-relaxed">{desc}</div>
+                  <div className="font-semibold text-sm mb-1 text-white">{title}</div>
+                  <div className="text-xs leading-relaxed" style={{ color: 'rgba(255,255,255,0.4)' }}>{desc}</div>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Investment models */}
           <div className="section-label mb-2">PARTNERSHIP STRUCTURES</div>
           <h2 className="section-title mb-10">How We Work Together</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
             {models.map(({ icon, title, desc, highlights }) => (
-              <div key={title} className="card-dark border border-gold/10 hover:border-gold/30">
+              <div key={title} className="card-dark" style={{ border: '1px solid rgba(201,145,42,0.1)' }}>
                 <div className="text-4xl mb-4">{icon}</div>
-                <h3 className="text-white font-bold mb-2">{title}</h3>
-                <p className="text-white/50 text-sm leading-relaxed mb-5">{desc}</p>
+                <h3 className="font-bold mb-2 text-white">{title}</h3>
+                <p className="text-sm leading-relaxed mb-5" style={{ color: 'rgba(255,255,255,0.5)' }}>{desc}</p>
                 <ul className="space-y-2">
                   {highlights.map((h) => (
-                    <li key={h} className="flex items-center gap-2 text-xs text-white/60">
-                      <span className="text-gold">✓</span> {h}
+                    <li key={h} className="flex items-center gap-2 text-xs" style={{ color: 'rgba(255,255,255,0.6)' }}>
+                      <span style={{ color: '#C9912A' }}>✓</span> {h}
                     </li>
                   ))}
                 </ul>
@@ -97,23 +95,21 @@ export default function Investor() {
             ))}
           </div>
 
-          {/* Process */}
           <div className="section-label mb-2">THE PROCESS</div>
           <h2 className="section-title mb-10">From Intro to Returns</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             {process.map(({ n, title, desc }) => (
               <div key={n} className="card-dark">
-                <div className="text-gold font-black text-3xl mb-3">{n}</div>
-                <h4 className="text-white font-semibold mb-2">{title}</h4>
-                <p className="text-white/50 text-sm leading-relaxed">{desc}</p>
+                <div className="font-black text-3xl mb-3" style={{ color: '#C9912A' }}>{n}</div>
+                <h4 className="font-semibold mb-2 text-white">{title}</h4>
+                <p className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.5)' }}>{desc}</p>
               </div>
             ))}
           </div>
 
-          {/* CTA */}
-          <div className="rounded-2xl border border-gold/20 p-10 text-center" style={{ background: 'rgba(201,145,42,0.05)' }}>
+          <div className="rounded-2xl p-10 text-center" style={{ background: 'rgba(201,145,42,0.05)', border: '1px solid rgba(201,145,42,0.2)' }}>
             <h2 className="text-white text-3xl font-black mb-4">Ready to Invest?</h2>
-            <p className="text-white/50 mb-8 max-w-lg mx-auto">
+            <p className="mb-8 max-w-lg mx-auto" style={{ color: 'rgba(255,255,255,0.5)' }}>
               Start a conversation with our investor relations team. We'll find the right opportunity for your goals.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

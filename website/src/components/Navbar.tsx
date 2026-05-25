@@ -10,9 +10,9 @@ const navLinks = [
       { label: 'All Services', href: '/services' },
       { label: 'Current Projects', href: '/projects' },
       { label: 'Upcoming Projects', href: '/upcoming-projects' },
-      { label: 'Available Rentals', href: '/rentals' },
     ],
   },
+  { label: 'Rentals', href: '/rentals' },
   { label: 'Our Team', href: '/team' },
   { label: 'Gallery', href: '/gallery' },
   { label: 'Investors', href: '/investor' },
@@ -48,15 +48,18 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-navy-dark/95 backdrop-blur-md shadow-xl shadow-black/20' : 'bg-navy-dark/80 backdrop-blur-sm'
+        scrolled ? 'backdrop-blur-md shadow-xl' : 'backdrop-blur-sm'
       }`}
-      style={{ borderBottom: scrolled ? '1px solid rgba(201,145,42,0.15)' : '1px solid rgba(201,145,42,0.08)' }}
+      style={{
+        background: scrolled ? 'rgba(8,15,24,0.95)' : 'rgba(8,15,24,0.80)',
+        borderBottom: scrolled ? '1px solid rgba(201,145,42,0.15)' : '1px solid rgba(201,145,42,0.08)',
+      }}
     >
       <div className="container-site flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 flex-shrink-0">
-          <img src="/nexus-logo.jpeg" alt="Nexus Growth Inc." className="h-10 w-auto" style={{ filter: 'brightness(0) invert(1)' }} />
-          <span className="text-gold text-xs font-semibold tracking-widest hidden sm:block">NEXUSGROWTHINC.COM</span>
+          <img src={`${import.meta.env.BASE_URL}nexus-logo.png`} alt="Nexus Growth Inc." className="h-10 w-auto" style={{ filter: 'brightness(0) invert(1)' }} />
+          <span className="text-xs font-semibold tracking-widest hidden sm:block" style={{ color: '#C9912A' }}>NEXUSGROWTHINC.COM</span>
         </Link>
 
         {/* Desktop nav */}
@@ -69,19 +72,25 @@ export default function Navbar() {
                 onMouseEnter={() => setDropdown(link.label)}
                 onMouseLeave={() => setDropdown(null)}
               >
-                <button className="text-sm font-medium text-white/70 hover:text-white transition-colors flex items-center gap-1">
+                <button className="text-sm font-medium transition-colors flex items-center gap-1" style={{ color: 'rgba(255,255,255,0.7)' }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = 'white')}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.7)')}
+                >
                   {link.label}
                   <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
                 {dropdown === link.label && (
-                  <div className="absolute top-full left-0 mt-2 w-52 bg-navy-mid border border-white/10 rounded-xl shadow-2xl shadow-black/40 overflow-hidden">
+                  <div className="absolute top-full left-0 mt-2 w-52 rounded-xl shadow-2xl overflow-hidden" style={{ background: '#111e2c', border: '1px solid rgba(255,255,255,0.1)' }}>
                     {link.children.map((child) => (
                       <Link
                         key={child.href}
                         to={child.href}
-                        className="block px-4 py-3 text-sm text-white/70 hover:text-white hover:bg-navy-light transition-colors"
+                        className="block px-4 py-3 text-sm transition-colors"
+                        style={{ color: 'rgba(255,255,255,0.7)' }}
+                        onMouseEnter={(e) => { e.currentTarget.style.color = 'white'; e.currentTarget.style.background = 'rgba(27,43,75,1)'; }}
+                        onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(255,255,255,0.7)'; e.currentTarget.style.background = ''; }}
                       >
                         {child.label}
                       </Link>
@@ -93,9 +102,8 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 to={link.href}
-                className={`text-sm font-medium transition-colors ${
-                  location.pathname === link.href ? 'text-gold' : 'text-white/70 hover:text-white'
-                }`}
+                className="text-sm font-medium transition-colors"
+                style={{ color: location.pathname === link.href ? '#C9912A' : 'rgba(255,255,255,0.7)' }}
               >
                 {link.label}
               </Link>
@@ -109,7 +117,8 @@ export default function Navbar() {
         {/* Mobile burger */}
         <button
           onClick={toggleMobile}
-          className="lg:hidden p-2 text-white/70 hover:text-white transition-colors"
+          className="lg:hidden p-2 transition-colors"
+          style={{ color: 'rgba(255,255,255,0.7)' }}
           aria-label="Toggle menu"
         >
           {open ? (
@@ -126,16 +135,16 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="lg:hidden bg-navy-dark border-t border-white/5 px-4 py-6 flex flex-col gap-2">
+        <div className="lg:hidden px-4 py-6 flex flex-col gap-2" style={{ background: '#080f18', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
           {navLinks.map((link) => (
             <div key={link.label}>
               <Link
                 to={link.href}
-                className={`block px-3 py-3 rounded-lg text-sm font-medium transition-colors ${
-                  location.pathname === link.href
-                    ? 'bg-navy-light text-gold'
-                    : 'text-white/70 hover:text-white hover:bg-navy-mid'
-                }`}
+                className="block px-3 py-3 rounded-lg text-sm font-medium transition-colors"
+                style={{
+                  color: location.pathname === link.href ? '#C9912A' : 'rgba(255,255,255,0.7)',
+                  background: location.pathname === link.href ? 'rgba(27,43,75,1)' : '',
+                }}
               >
                 {link.label}
               </Link>
@@ -145,7 +154,8 @@ export default function Navbar() {
                     <Link
                       key={child.href}
                       to={child.href}
-                      className="block px-3 py-2 rounded-lg text-xs text-white/50 hover:text-gold transition-colors"
+                      className="block px-3 py-2 rounded-lg text-xs transition-colors"
+                      style={{ color: 'rgba(255,255,255,0.5)' }}
                     >
                       {child.label}
                     </Link>

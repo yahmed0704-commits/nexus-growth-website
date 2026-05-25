@@ -6,7 +6,7 @@ const faqs: { category: string; items: FAQItem[] }[] = [
   {
     category: 'General',
     items: [
-      { q: 'What does Nexus Growth Inc. do?', a: "Nexus Growth Inc. is a New Jersey-based real estate investment and development company. We specialize in fix-and-flip renovations, rental property management, and investor partnerships. Our mission is to transform undervalued properties into quality homes and investments." },
+      { q: 'What does Nexus Growth Inc. do?', a: "Nexus Growth Inc. is a New York-based real estate investment and development company. We specialize in fix-and-flip renovations, rental property management, and investor partnerships. Our mission is to transform undervalued properties into quality homes and investments." },
       { q: 'Where does NGI operate?', a: "We primarily operate across Essex, Union, Bergen, and Morris counties in New Jersey. Our local expertise allows us to identify high-potential properties and deliver results efficiently." },
       { q: 'How long has NGI been in business?', a: "[Company founding details — placeholder. Please add your actual founding year and background.]" },
     ],
@@ -40,23 +40,27 @@ const faqs: { category: string; items: FAQItem[] }[] = [
   },
 ];
 
-function FAQItem({ q, a }: FAQItem) {
+function FAQAccordion({ q, a }: FAQItem) {
   const [open, setOpen] = useState(false);
   return (
     <div
-      className="border border-white/5 rounded-xl overflow-hidden transition-all hover:border-gold/20"
-      style={{ background: open ? 'rgba(27,43,75,0.4)' : 'rgba(17,30,44,0.5)' }}
+      className="rounded-xl overflow-hidden transition-all"
+      style={{
+        border: '1px solid rgba(255,255,255,0.05)',
+        background: open ? 'rgba(27,43,75,0.4)' : 'rgba(17,30,44,0.5)',
+        borderColor: open ? 'rgba(201,145,42,0.2)' : 'rgba(255,255,255,0.05)',
+      }}
     >
       <button
         className="w-full flex items-center justify-between px-6 py-4 text-left"
         onClick={() => setOpen((v) => !v)}
       >
-        <span className="text-white font-medium text-sm pr-4">{q}</span>
-        <span className={`text-gold transition-transform flex-shrink-0 ${open ? 'rotate-45' : ''}`}>+</span>
+        <span className="font-medium text-sm pr-4 text-white">{q}</span>
+        <span className="flex-shrink-0 transition-transform text-lg font-bold" style={{ color: '#C9912A', transform: open ? 'rotate(45deg)' : 'none' }}>+</span>
       </button>
       {open && (
         <div className="px-6 pb-5">
-          <p className="text-white/60 text-sm leading-relaxed">{a}</p>
+          <p className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.6)' }}>{a}</p>
         </div>
       )}
     </div>
@@ -70,31 +74,31 @@ export default function FAQ() {
         <div className="container-site text-center">
           <div className="section-label">ANSWERS</div>
           <h1 className="text-4xl md:text-5xl font-black text-white mb-4">Frequently Asked Questions</h1>
-          <p className="text-white/60 text-lg max-w-2xl mx-auto">
+          <p className="text-lg max-w-2xl mx-auto" style={{ color: 'rgba(255,255,255,0.6)' }}>
             Common questions about our services, rental process, and investment opportunities.
           </p>
         </div>
       </section>
 
-      <section className="py-20 bg-navy-dark">
+      <section className="py-20" style={{ background: '#080f18' }}>
         <div className="container-site max-w-3xl mx-auto">
           {faqs.map(({ category, items }) => (
             <div key={category} className="mb-12">
               <div className="flex items-center gap-3 mb-6">
                 <div className="section-label mb-0">{category}</div>
-                <div className="flex-1 h-px bg-gold/10" />
+                <div className="flex-1 h-px" style={{ background: 'rgba(201,145,42,0.1)' }} />
               </div>
               <div className="flex flex-col gap-3">
                 {items.map((item) => (
-                  <FAQItem key={item.q} {...item} />
+                  <FAQAccordion key={item.q} {...item} />
                 ))}
               </div>
             </div>
           ))}
 
-          <div className="mt-12 text-center rounded-2xl border border-gold/15 p-8" style={{ background: 'rgba(201,145,42,0.05)' }}>
-            <h3 className="text-white font-bold text-xl mb-3">Still Have Questions?</h3>
-            <p className="text-white/50 text-sm mb-6">We're happy to help. Reach out and we'll get back to you within 24 hours.</p>
+          <div className="mt-12 text-center rounded-2xl p-8" style={{ border: '1px solid rgba(201,145,42,0.15)', background: 'rgba(201,145,42,0.05)' }}>
+            <h3 className="font-bold text-xl mb-3 text-white">Still Have Questions?</h3>
+            <p className="text-sm mb-6" style={{ color: 'rgba(255,255,255,0.5)' }}>We're happy to help. Reach out and we'll get back to you within 24 hours.</p>
             <a href="/contact" className="btn-gold text-sm">Contact Us</a>
           </div>
         </div>

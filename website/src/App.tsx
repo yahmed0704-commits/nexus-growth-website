@@ -14,9 +14,13 @@ import Investor from './pages/Investor';
 import FAQ from './pages/FAQ';
 import Contact from './pages/Contact';
 
+const base = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL.slice(0, -1)
+  : import.meta.env.BASE_URL;
+
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={base}>
       <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         <Navbar />
