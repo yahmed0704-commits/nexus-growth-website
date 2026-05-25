@@ -8,7 +8,7 @@ const stats = [
 ];
 
 const services = [
-  { icon: '🏠', title: 'Fix & Flip', desc: 'Strategic property acquisitions, full renovations, and profitable resale across New Jersey markets.' },
+  { icon: '🏠', title: 'Fix & Flip', desc: 'Strategic property acquisitions, full renovations, and profitable resale across New York markets.' },
   { icon: '🏢', title: 'Rental Management', desc: 'End-to-end rental management for residential and multi-family properties.' },
   { icon: '🔨', title: 'Renovation & Construction', desc: 'Expert renovation coordination delivering quality craftsmanship on time and on budget.' },
   { icon: '📈', title: 'Real Estate Investment', desc: 'Creating high-yield investment opportunities for partners and stakeholders.' },
@@ -17,14 +17,14 @@ const services = [
 ];
 
 const projects = [
-  { name: 'Maple St.', location: 'Maplewood, NJ', status: 'Active Renovation', type: 'Fix & Flip', gold: true },
-  { name: 'Willow Dr.', location: 'South Orange, NJ', status: 'Active', type: 'Rental Property', gold: true },
-  { name: 'Riverside Ct.', location: 'Bloomfield, NJ', status: 'Rented', type: 'Multi-Family', gold: false },
+  { name: 'Maple St.', location: 'Maplewood, NY', status: 'Active Renovation', type: 'Fix & Flip', gold: true },
+  { name: 'Willow Dr.', location: 'South Orange, NY', status: 'Active', type: 'Rental Property', gold: true },
+  { name: 'Riverside Ct.', location: 'Bloomfield, NY', status: 'Rented', type: 'Multi-Family', gold: false },
 ];
 
 const why = [
   { icon: '⭐', title: 'Quality First', desc: 'Every project is executed with meticulous attention to detail and craftsmanship.' },
-  { icon: '🛡️', title: 'Trusted & Reliable', desc: 'Years of experience and a proven track record across New Jersey real estate.' },
+  { icon: '🛡️', title: 'Trusted & Reliable', desc: 'Years of experience and a proven track record across New York real estate.' },
   { icon: '💡', title: 'Smart Investment', desc: 'Data-driven decisions that maximize ROI for all stakeholders and partners.' },
   { icon: '🌱', title: 'Community Focused', desc: 'We build neighborhoods, not just properties — committed to local growth.' },
 ];
@@ -53,7 +53,7 @@ export default function Home() {
                 Quality.
               </h1>
               <p className="text-lg leading-relaxed mb-8 max-w-xl" style={{ color: 'rgba(255,255,255,0.6)' }}>
-                Nexus Growth Inc. is a premier real estate investment and development company — transforming properties, building communities, and delivering results across New York and New Jersey.
+                Nexus Growth Inc. is a premier real estate investment and development company — transforming properties, building communities, and delivering results across New York.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link to="/projects" className="btn-gold text-sm">View Our Projects →</Link>
@@ -67,7 +67,7 @@ export default function Home() {
                   <img src={`${import.meta.env.BASE_URL}nexus-logo.png`} alt="Nexus Growth Inc." className="h-32 w-auto" style={{ filter: 'brightness(0) invert(1)', opacity: 0.9 }} />
                   <div className="text-center mt-2">
                     <div className="text-sm font-semibold" style={{ color: '#C9912A' }}>Active Renovation</div>
-                    <div className="text-xs mt-1" style={{ color: 'rgba(255,255,255,0.5)' }}>Maple St. · Maplewood, NJ</div>
+                    <div className="text-xs mt-1" style={{ color: 'rgba(255,255,255,0.5)' }}>Maple St. · Maplewood, NY</div>
                   </div>
                 </div>
               </div>

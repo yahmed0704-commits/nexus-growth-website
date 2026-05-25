@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 const upcoming = [
   {
     name: '[Property Address — placeholder]',
-    location: '[City, NJ — placeholder]',
+    location: '[City, NY — placeholder]',
     type: 'Fix & Flip',
     status: 'Under Contract',
     est: '[Q3 2025 — placeholder]',
@@ -11,7 +11,7 @@ const upcoming = [
   },
   {
     name: '[Property Address — placeholder]',
-    location: '[City, NJ — placeholder]',
+    location: '[City, NY — placeholder]',
     type: 'Rental Conversion',
     status: 'In Analysis',
     est: '[Q4 2025 — placeholder]',
@@ -19,7 +19,7 @@ const upcoming = [
   },
   {
     name: '[Property Address — placeholder]',
-    location: '[City, NJ — placeholder]',
+    location: '[City, NY — placeholder]',
     type: 'Fix & Flip',
     status: 'Prospecting',
     est: '[2026 — placeholder]',
@@ -73,7 +73,7 @@ export default function UpcomingProjects() {
             <h3 className="text-white text-2xl font-bold mb-6">Our Acquisition Strategy</h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {[
-                ['📍', 'Market Focus', 'Essex, Union, Bergen, and Morris counties in NJ'],
+                ['📍', 'Market Focus', 'New York metro area'],
                 ['🎯', 'Target Properties', 'Distressed single-family and multi-family properties'],
                 ['💰', 'Investment Range', '[Investment range — placeholder]'],
               ].map(([icon, title, detail]) => (

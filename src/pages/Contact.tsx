@@ -82,7 +82,7 @@ export default function Contact() {
 
               <div className="space-y-5">
                 {[
-                  { icon: '📍', label: 'Office', val: 'Vestal, New York 13850', sub: 'Serving the greater NY/NJ area' },
+                  { icon: '📍', label: 'Office', val: 'Vestal, New York 13850', sub: 'Serving the greater New York area' },
                   { icon: '📧', label: 'Email', val: 'admins@nexusgrowthinc.com', sub: 'We reply within 24 hours' },
                   { icon: '📞', label: 'Phone', val: '(212) 658-0007', sub: 'Mon–Fri, 9am–5pm ET' },
                   { icon: '💬', label: 'Response Time', val: 'Within 24 hours', sub: 'Typically faster for urgent matters' },

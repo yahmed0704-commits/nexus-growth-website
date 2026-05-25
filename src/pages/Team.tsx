@@ -4,7 +4,7 @@ const team = [
   {
     name: 'Yahya Ahmed',
     title: 'CEO & President',
-    bio: 'Leads Nexus Growth Inc. with a vision for quality-first real estate development and investment across New York and New Jersey. Drives the company\'s strategic growth, acquisitions, and investor partnerships.',
+    bio: 'Leads Nexus Growth Inc. with a vision for quality-first real estate development and investment across New York. Drives the company\'s strategic growth, acquisitions, and investor partnerships.',
     initials: 'YA',
     photo: `${import.meta.env.BASE_URL}team-yahya.jpeg`,
   },

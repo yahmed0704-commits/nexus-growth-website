@@ -10,7 +10,7 @@ const values = [
 ];
 
 const milestones = [
-  { year: 'Founded', detail: 'Nexus Growth Inc. established with a mission to transform New York and New Jersey real estate.' },
+  { year: 'Founded', detail: 'Nexus Growth Inc. established with a mission to transform New York real estate.' },
   { year: 'Early Growth', detail: 'First successful fix & flip projects completed across Essex and Union counties.' },
   { year: 'Expansion', detail: 'Expanded into rental property management and multi-family investments.' },
   { year: 'Today', detail: '12+ properties transformed, $5M+ portfolio, and growing investor partnerships.' },
@@ -40,7 +40,7 @@ export default function About() {
                 Nexus Growth Inc. is a full-service real estate investment and development company based in New York. We specialize in fix-and-flip renovations, rental property management, and strategic real estate partnerships.
               </p>
               <p className="leading-relaxed mb-4" style={{ color: 'rgba(255,255,255,0.6)' }}>
-                Founded with a simple but powerful belief — that quality work creates lasting value — we've grown from our first renovation project into a recognized force in the New York and New Jersey real estate market.
+                Founded with a simple but powerful belief — that quality work creates lasting value — we've grown from our first renovation project into a recognized force in the New York real estate market.
               </p>
               <p className="leading-relaxed mb-8" style={{ color: 'rgba(255,255,255,0.6)' }}>
                 Today, we manage a diverse portfolio spanning active renovations, rental units, and investment partnerships — with a team dedicated to delivering results for every stakeholder.
@@ -48,9 +48,11 @@ export default function About() {
               <Link to="/contact" className="btn-gold text-sm">Get In Touch →</Link>
             </div>
             <div className="relative">
-              <div className="rounded-2xl overflow-hidden" style={{ background: 'linear-gradient(135deg, #1B2B4B, #243d60)', height: 400, border: '1px solid rgba(201,145,42,0.2)' }}>
-                <div className="h-full flex flex-col items-center justify-center gap-4 p-8">
-                  <img src={`${import.meta.env.BASE_URL}nexus-logo.png`} alt="NGI" className="h-28 w-auto" style={{ filter: 'brightness(0) invert(1)', opacity: 0.85 }} />
+              <div className="rounded-2xl overflow-hidden relative" style={{ background: 'linear-gradient(135deg, #1B2B4B, #243d60)', height: 400, border: '1px solid rgba(201,145,42,0.2)' }}>
+                <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(circle at 50% 45%, rgba(201,145,42,0.12) 0%, transparent 70%)' }} />
+                <div className="h-full flex flex-col items-center justify-center gap-6 p-8 relative">
+                  <img src={`${import.meta.env.BASE_URL}nexus-logo.png`} alt="NGI" className="w-4/5 max-w-xs h-auto" style={{ filter: 'brightness(0) invert(1)', opacity: 0.92 }} />
+                  <div className="w-16 h-px" style={{ background: 'rgba(201,145,42,0.4)' }} />
                   <p className="text-sm font-semibold tracking-widest text-center" style={{ color: '#C9912A' }}>WE BELIEVE IN QUALITY.</p>
                 </div>
               </div>

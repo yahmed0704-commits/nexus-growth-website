@@ -6,7 +6,7 @@ const services = [
     icon: '🏠',
     title: 'Fix & Flip',
     tagline: 'Strategic acquisitions, quality renovations, profitable resale.',
-    desc: 'We identify undervalued properties across New Jersey, execute comprehensive renovations, and resell at maximum value. Our team manages every step — from acquisition analysis to final staging and sale.',
+    desc: 'We identify undervalued properties across New York, execute comprehensive renovations, and resell at maximum value. Our team manages every step — from acquisition analysis to final staging and sale.',
     includes: ['Property sourcing & analysis', 'Acquisition strategy', 'Full renovation management', 'Interior design & staging', 'Market-timed resale', 'ROI tracking & reporting'],
   },
   {

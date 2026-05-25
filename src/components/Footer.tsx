@@ -27,7 +27,7 @@ export default function Footer() {
               style={{ filter: 'brightness(0) invert(1)' }}
             />
             <p className="text-sm leading-relaxed mb-4" style={{ color: 'rgba(255,255,255,0.5)' }}>
-              Nexus Growth Inc. is a premier real estate investment and development company transforming properties and building communities across New York and New Jersey.
+              Nexus Growth Inc. is a premier real estate investment and development company transforming properties and building communities across New York.
             </p>
             <p className="text-xs font-semibold tracking-widest" style={{ color: '#C9912A' }}>WE BELIEVE IN QUALITY.</p>
           </div>

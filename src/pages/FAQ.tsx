@@ -7,7 +7,7 @@ const faqs: { category: string; items: FAQItem[] }[] = [
     category: 'General',
     items: [
       { q: 'What does Nexus Growth Inc. do?', a: "Nexus Growth Inc. is a New York-based real estate investment and development company. We specialize in fix-and-flip renovations, rental property management, and investor partnerships. Our mission is to transform undervalued properties into quality homes and investments." },
-      { q: 'Where does NGI operate?', a: "We primarily operate across Essex, Union, Bergen, and Morris counties in New Jersey. Our local expertise allows us to identify high-potential properties and deliver results efficiently." },
+      { q: 'Where does NGI operate?', a: "We primarily operate across New York. Our local expertise allows us to identify high-potential properties and deliver results efficiently." },
       { q: 'How long has NGI been in business?', a: "[Company founding details — placeholder. Please add your actual founding year and background.]" },
     ],
   },
@@ -34,7 +34,7 @@ const faqs: { category: string; items: FAQItem[] }[] = [
     category: 'Projects & Construction',
     items: [
       { q: 'How long does a typical renovation take?', a: "Project timelines vary based on scope. A standard fix-and-flip renovation typically takes 3–6 months from acquisition to listing. We provide detailed timelines at the start of every project." },
-      { q: 'Do you work with outside contractors?', a: "Yes. We maintain relationships with trusted, licensed contractors across NJ. All work is coordinated, supervised, and quality-checked by our project management team." },
+      { q: 'Do you work with outside contractors?', a: "Yes. We maintain relationships with trusted, licensed contractors across New York. All work is coordinated, supervised, and quality-checked by our project management team." },
       { q: 'Can I hire NGI to renovate my property?', a: "This depends on current capacity and project fit. Contact us to discuss your renovation needs and we'll let you know if and how we can help." },
     ],
   },
