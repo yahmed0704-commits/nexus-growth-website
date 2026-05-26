@@ -65,6 +65,13 @@ const team = [
     photo: `${import.meta.env.BASE_URL}team-nasir.jpeg`,
   },
   {
+    name: 'Rolendy Bencosme',
+    title: 'Renovation & Maintenance Team Lead',
+    bio: 'Oversees renovation progress and project coordination, and manages property maintenance operations and repair requests across the portfolio.',
+    initials: 'RB',
+    photo: `${import.meta.env.BASE_URL}team-rolendy.png`,
+  },
+  {
     name: 'Chowdhury Dewan Siddiquzaman',
     title: 'Strategic Growth & Investment Advisor',
     bio: 'Participates in strategic planning and long-term decision making, supports investment evaluation and capital deployment, and contributes to business expansion strategy across Nexus Growth Inc.',
