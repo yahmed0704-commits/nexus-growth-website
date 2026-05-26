@@ -23,11 +23,11 @@ const team = [
     photo: `${import.meta.env.BASE_URL}team-yeasir.jpeg`,
   },
   {
-    name: '[Admin — name coming soon]',
-    title: 'Administration',
-    bio: 'Supports day-to-day office operations, document management, and internal coordination across departments.',
-    initials: 'AD',
-    photo: null,
+    name: 'Syed Mantaka Matalib',
+    title: 'Administrative & Operations',
+    bio: 'Coordinates construction, leasing, and operational execution. Assists in property acquisition and management, supports tenant relations and rental oversight, and assists with financial reporting and internal control.',
+    initials: 'SM',
+    photo: `${import.meta.env.BASE_URL}team-mantaka.jpeg`,
   },
   {
     name: 'Abdul Mumit Liton',
