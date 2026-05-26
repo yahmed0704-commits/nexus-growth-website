@@ -44,11 +44,11 @@ const team = [
     photo: `${import.meta.env.BASE_URL}team-tasnim.jpeg`,
   },
   {
-    name: 'Mohammed Khan',
+    name: 'Suleman Khan',
     title: 'Property Acquisition & Tenant Relations',
     bio: 'Identifies property acquisition opportunities, manages tenant relationships, assists in property evaluations, and supports leasing coordination across the portfolio.',
-    initials: 'MK',
-    photo: `${import.meta.env.BASE_URL}team-mohammed.jpeg`,
+    initials: 'SK',
+    photo: `${import.meta.env.BASE_URL}team-suleman.png`,
   },
   {
     name: 'Abdul Chowdhury',
