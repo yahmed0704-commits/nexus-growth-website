@@ -57,6 +57,13 @@ const team = [
     initials: 'AC',
     photo: `${import.meta.env.BASE_URL}team-abdul.jpeg`,
   },
+  {
+    name: 'Nasir Uddin',
+    title: 'Financial Reporting & Compliance Support',
+    bio: 'Supports financial reporting, assists with budgeting and internal controls, and reviews compliance matters to ensure accuracy and regulatory adherence across all operations.',
+    initials: 'NU',
+    photo: `${import.meta.env.BASE_URL}team-nasir.jpeg`,
+  },
 ];
 
 export default function Team() {
