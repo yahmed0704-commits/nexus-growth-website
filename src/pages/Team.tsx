@@ -16,11 +16,11 @@ const team = [
     photo: `${import.meta.env.BASE_URL}team-stanley.jpeg`,
   },
   {
-    name: '[Secretary — name coming soon]',
+    name: 'Md Yeasir Arafath',
     title: 'Secretary',
-    bio: 'Manages corporate governance, board communications, and executive administrative functions.',
-    initials: 'SE',
-    photo: null,
+    bio: 'Maintains partnership records and documentation, records meeting minutes, and ensures compliance with legal requirements across Nexus Growth Inc.',
+    initials: 'MY',
+    photo: `${import.meta.env.BASE_URL}team-yeasir.jpeg`,
   },
   {
     name: '[Admin — name coming soon]',
