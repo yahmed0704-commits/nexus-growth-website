@@ -64,6 +64,13 @@ const team = [
     initials: 'NU',
     photo: `${import.meta.env.BASE_URL}team-nasir.jpeg`,
   },
+  {
+    name: 'Chowdhury Dewan Siddiquzaman',
+    title: 'Strategic Growth & Investment Advisor',
+    bio: 'Participates in strategic planning and long-term decision making, supports investment evaluation and capital deployment, and contributes to business expansion strategy across Nexus Growth Inc.',
+    initials: 'CS',
+    photo: `${import.meta.env.BASE_URL}team-siddiquzaman.png`,
+  },
 ];
 
 export default function Team() {
