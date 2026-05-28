@@ -4,8 +4,8 @@ import PhotoGallery from '../components/PhotoGallery';
 
 const projects = [
   {
-    name: 'Maple St.',
-    location: 'Maplewood, NY',
+    name: '22 James St',
+    location: 'Binghamton, NY 13903',
     status: 'Active Renovation',
     type: 'Fix & Flip',
     gold: true,
