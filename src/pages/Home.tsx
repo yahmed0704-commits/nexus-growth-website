@@ -101,7 +101,7 @@ const stats = [
 ];
 
 const projects = [
-  { name: 'Maple St.',    location: 'Maplewood, NY',   status: 'Active Renovation', type: 'Fix & Flip',    gold: true,  progress: 60 },
+  { name: '22 James St',    location: 'Binghamton, NY 13903',   status: 'Active Renovation', type: 'Fix & Flip',    gold: true,  progress: 60 },
   { name: 'Willow Dr.',   location: 'South Orange, NY', status: 'Active',            type: 'Rental',         gold: true,  progress: null },
   { name: 'Riverside Ct.', location: 'Bloomfield, NY', status: 'Rented',            type: 'Multi-Family',   gold: false, progress: null },
 ];
@@ -187,7 +187,7 @@ export default function Home() {
                   <img src={`${import.meta.env.BASE_URL}nexus-logo.png`} alt="Nexus Growth Inc." className="h-12 w-auto flex-shrink-0" style={{ filter: 'brightness(0) invert(1)', opacity: 0.9 }} />
                   <div className="min-w-0">
                     <div className="text-xs font-semibold mb-0.5" style={{ color: '#C9912A' }}>Active Renovation</div>
-                    <div className="text-white font-bold text-sm leading-tight">Maple St. · Maplewood, NY</div>
+                    <div className="text-white font-bold text-sm leading-tight">22 James St · Binghamton, NY 13903</div>
                     <div className="text-xs mt-1 font-semibold" style={{ color: 'rgba(255,255,255,0.4)' }}>12+ Properties Transformed</div>
                   </div>
                 </div>
@@ -249,14 +249,14 @@ export default function Home() {
                   {/* Location chip */}
                   <div className="absolute bottom-3 right-3 flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs" style={{ background: 'rgba(8,15,24,0.8)', color: 'rgba(255,255,255,0.6)', backdropFilter: 'blur(8px)', border: '1px solid rgba(255,255,255,0.08)' }}>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-3 h-3 flex-shrink-0" style={{ color: '#C9912A' }}><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                    Maplewood, NY
+                    Binghamton, NY 13903
                   </div>
                 </div>
 
                 {/* Card body */}
                 <div className="p-5">
                   <div className="mb-4">
-                    <h3 className="font-black text-lg text-white mb-0.5">Maple Street Renovation</h3>
+                    <h3 className="font-black text-lg text-white mb-0.5">22 James St Renovation</h3>
                     <div className="flex items-center gap-2">
                       <span className="text-xs font-semibold px-2 py-0.5 rounded-full" style={{ background: 'rgba(201,145,42,0.15)', color: '#C9912A' }}>Fix & Flip</span>
                       <span className="text-xs" style={{ color: 'rgba(255,255,255,0.4)' }}>Full interior renovation</span>
